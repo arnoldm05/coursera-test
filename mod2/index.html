@@ -3,20 +3,28 @@
 <html>
 
 <head>
-	
-<tittle>Module 2 Assignment</tittle>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<tittle></tittle>
 
 <style>
 
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+
+}
 
 body {
 
 	background-color: gray;
+
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr;
   background-color: #2196F3;
   padding: 10px;
   gap: 1rem;
@@ -24,22 +32,70 @@ body {
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+  padding: 50px;
+  position: relative;
 }
+
+h1{
+
+	font-size: 24px;
+	text-align: center;     
+}
+
+.spa{
+
+	font-size: 24px;
+	background-color: red;
+	position: absolute;
+	top: 0;
+	right: 0;
+
+
+}
+
+/** Media Query**/
+
+
+@media (min-width: 992px) and (max-width: 1199px){
+
+	.grid-container {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+	.grid-item:last-child {
+		grid-column:  1 / span 2;
+	}
+}
+
+@media (min-width: 1200px){
+	.grid-container {
+	  grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+
+
 </style>
 
 </head>
 
 <body>
 
-	<h1> 
+	<h1>Pre-Graded Assignment</h1>
 
 	<div class="grid-container">
-  <div class="grid-item"><span>span 1</span></div>
-  <div class="grid-item"><span>span 2</span></div>
-  <div class="grid-item"><span>span 3</span></div>  
+  <div class="grid-item">
+  	<span class="spa">span 1</span>
+  	<p>this is the span 1</p>
+
+  </div>
+  <div class="grid-item">
+  	<span class="spa">span 2</span>
+  	<p>this is the span 2</p>
+  </div>
+  <div class="grid-item">
+  	<span class="spa">span 3</span>
+  	<p>this is the span 3</p>
+  </div>  
 	</div>
 
 
